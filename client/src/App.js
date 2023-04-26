@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import Login from './Login';
-import Home from './Home';
+import Jobs from './Jobs';
+import MyApplications from './MyApplications';
 import Navigation from './Navigation';
 import { MyContext } from "./MyContext";
 import { Route, Switch } from 'react-router-dom';
@@ -17,7 +18,10 @@ function App() {
       <Navigation />
       <Switch> 
         <Route exact path="/" >
-          <Home />
+          <MyApplications/>
+        </Route>
+        <Route exact path="/jobs" >
+          <Jobs/>
         </Route>
       </Switch>
     </div>

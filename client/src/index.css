@@ -129,9 +129,34 @@ padding: "20px";
   margin-left: 1050px;
 }
 
-.profileImage {
-  width: 90px;
-  height: 70px;
-  border-radius: 50%;
-}
+
  
+.card {
+  width: 25rem;
+  height: 10rem;
+  display: inline-grid;
+  margin: 0.5rem 0.5rem;
+  border: solid 1px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0px;
+ }
+
+ .jobDescription {
+  font-size: 15px;
+  margin-left: 5px;
+ }
+
+ .jobName {
+  margin-left: 5px;
+ }
+
+ .link {
+  text-decoration: none;
+  color: black;
+ }
+
+ .apply {
+  color: green;
+  text-align: center;
+  font-size: 50px;
+ }

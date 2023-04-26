@@ -11,3 +11,127 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.loginTitle {
+  color: green;
+  font-family: cursive;
+  font-style: italic;
+  font-size: 53px;
+  margin-bottom: 0px;
+  
+}
+
+
+
+.label{
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.input {
+  width: 450px;
+  height: 35px;
+  border: solid 0.1px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.submit {
+  background-color: green;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  width: 450px;
+  height: 35px;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+
+.loginCenter {
+  width: 455px;
+  margin: auto;
+}
+
+.logInButton {
+  border-radius: 5px;
+  border: solid 1px;
+  background-color: white;
+  color: green;
+  height: 35px;
+  width: 80px;
+  font-weight: bold;
+  font-size: 15px;
+  
+}
+
+.textInput {
+  width: 450px;
+  height: 80px;
+  border: solid 0.1px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.errors {
+  color: red;
+  background-color: mistyrose;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+  position: relative;
+  padding: 15px; 
+  padding-left: 45px;
+}
+
+.exclamtion {
+  position: absolute;
+  top: 9px; /* adjust this value as needed */
+  left: 24px; /* adjust this value as needed */
+  background-color: white;
+  padding: 8px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.navigation {
+background-color: green;
+padding: 15px;
+}
+
+.navTitle {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 0px;
+  display: inline-block;
+  padding: "20px";
+  margin: 2 6px 6px;
+}
+
+.logout{
+display: inline;
+background-color: white;
+color: green;
+font-weight: bold;
+border: solid 1px;
+border-radius: 5px;
+font-size: 15px;
+height: 35px;
+width: 80px;
+padding: "20px";
+}
+
+.right {
+  display:inline-block;
+  margin-left: 1050px;
+}
+
+.profileImage {
+  width: 90px;
+  height: 70px;
+  border-radius: 50%;
+}
+ 

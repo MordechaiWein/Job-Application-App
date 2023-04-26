@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react';
 import Login from './Login';
 import Jobs from './Jobs';
-import MyApplications from './MyApplications';
+import Home from './Home';
+import Application from './Application';
 import Navigation from './Navigation';
 import { MyContext } from "./MyContext";
 import { Route, Switch } from 'react-router-dom';
@@ -11,17 +12,20 @@ function App() {
   
   const {user} = useContext(MyContext)
   
-  if (!user) return <Login/>
+  if (!user) return  <Login/>
 
   return (
     <div>
       <Navigation />
       <Switch> 
         <Route exact path="/" >
-          <MyApplications/>
+          <Home/>
         </Route>
         <Route exact path="/jobs" >
           <Jobs/>
+        </Route>
+        <Route path="/jobs/:id">
+          <Application/>
         </Route>
       </Switch>
     </div>

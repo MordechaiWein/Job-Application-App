@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { MyContext } from "./MyContext";
 
-function MyApplications() {
+function Home() {
 
     const {user} = useContext(MyContext)
 
@@ -13,4 +13,4 @@ function MyApplications() {
     )
 }
 
-export default MyApplications
+export default Home

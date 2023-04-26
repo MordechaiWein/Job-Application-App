@@ -26,7 +26,7 @@ function Navigation() {
         <div className="navigation">
           <h1 className="navTitle">New Career Network</h1>
           <div className="right">
-            <NavLink to="/" exact style={linkStyles}> My Applications </NavLink>
+            <NavLink to="/" exact style={linkStyles}> Home </NavLink>
             <NavLink to="/jobs" exact style={linkStyles} > Jobs </NavLink>
             <button className="logout"onClick={handleClick}>Log Out</button>
           </div>

@@ -5,6 +5,7 @@ const MyContext =  React.createContext()
 function MyProvider({children}) {
 
     const [user, setUser] = useState(null)
+    const [jobs, setJobs] = useState([])
 
     useEffect(() => {
         fetch("/me")
@@ -14,10 +15,20 @@ function MyProvider({children}) {
             }
         })
     },[])
+
+    useEffect(() => {
+        fetch('/jobs')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            setJobs(data)
+            
+        })
+    },[])
     
 
     return (
-        <MyContext.Provider value={{user, setUser}}>
+        <MyContext.Provider value={{user, setUser, jobs}}>
             {children}
         </MyContext.Provider>
     ) 

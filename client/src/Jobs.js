@@ -1,21 +1,10 @@
-import React, {useEffect, useState } from "react";
-
+import React, { useContext } from "react";
+import { MyContext } from "./MyContext";
 import JobCard from "./JobCard";
 
 function Jobs() {  
 
-    const [jobs, setJobs] = useState([])
-    
-    useEffect(() => {
-        fetch('/jobs')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            setJobs(data)
-            
-        })
-    },[])
-
+    const {jobs} = useContext(MyContext)
     const jobList = jobs.map(job => <JobCard key={job.id} job={job}/>)
     
     return (

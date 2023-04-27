@@ -9,16 +9,16 @@ class ApplicationsController < ApplicationController
 
     def create
         user = User.find_by(id: session[:user_id])
-        if user
+       
             application = user.applications.create(strong_params)
             if application.valid?
                render json: application, status: :created
             else
                 render json: {errors: application.errors.full_messages}, status: :unprocessable_entity
             end
-        else
-            render json: {errors: ['unauthorized'] }, status: :unauthorized
-        end
+     
+         
+      
     end
 
     def update

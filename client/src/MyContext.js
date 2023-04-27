@@ -24,7 +24,7 @@ function MyProvider({children}) {
     
 
     return (
-        <MyContext.Provider value={{user, setUser, jobs}}>
+        <MyContext.Provider value={{user, setUser, jobs, setJobs}}>
             {children}
         </MyContext.Provider>
     ) 

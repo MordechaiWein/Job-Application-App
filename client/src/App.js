@@ -12,30 +12,6 @@ import './App.css';
 function App() {
   
   const {user} = useContext(MyContext)
-  const [applications, setApplications] = useState([])
-
-  useEffect(() => {
-    fetch('/applications')
-    .then(response => response.json())
-    .then(data => setApplications(data))
-  },[])
-
-  function eraseApplication(erasedApplication) {
-    const applicationsToDisplay = applications.filter(application => application.id !== erasedApplication.id)
-    setApplications(applicationsToDisplay)
-  }
-
-
-  function editApplication(updatedApplication) {
-    const updateApplication = applications.map((application) => {
-        if (application.id === updatedApplication.id) {
-        return updatedApplication
-        } else {
-        return application
-        }
-    })
-    setApplications(updateApplication)
-}
   
   if (!user) return  <Login/>
 
@@ -44,13 +20,13 @@ function App() {
       <Navigation />
       <Switch> 
         <Route exact path="/" >
-          <Home applications={applications} eraseApplication={eraseApplication} editApplication={editApplication}/>
+          <Home />
         </Route>
         <Route exact path="/jobs" >
           <Jobs/>
         </Route>
         <Route path="/jobs/:id">
-          <Application setApplications={setApplications} applications={applications}/>
+          <Application />
         </Route>
         <Route path="/admin">
           <Admin/>

@@ -2,10 +2,10 @@ import React, { useState, useContext } from "react";
 import { MyContext } from "./MyContext";
 import { useParams, useHistory } from "react-router-dom";
 
-function Application({setApplications, applications}) {
+function Application() {
     
     const history = useHistory()
-    const {jobs, setUser, user} = useContext(MyContext)
+    const {jobs, setApplications, applications} = useContext(MyContext)
     const params = useParams()
     const [errors, setErrors] = useState([])
    

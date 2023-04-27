@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { MyContext } from "./MyContext";
 
-function ApplicationCard({application, eraseApplication, editApplication }) {
+function ApplicationCard({application}) {
 
+    const {eraseApplication, editApplication } = useContext(MyContext)
     const [editFlag, setEditFlag] = useState(true)
     const [errors, setErrors] = useState([])
     const [data, setData] = useState({

@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import ApplicationCard from "./ApplicationCard";
 import { MyContext } from "./MyContext";
 
-function Home({applications, eraseApplication, editApplication}) {
+function Home() {
 
-    const {user} = useContext(MyContext)
-    const JobApplications = applications.map(application => <ApplicationCard key={application.id} application={application} eraseApplication={eraseApplication} editApplication={editApplication}/>)
+    const {user, applications} = useContext(MyContext)
+    const JobApplications = applications.map(application => <ApplicationCard key={application.id} application={application}/>)
     
     
     return (

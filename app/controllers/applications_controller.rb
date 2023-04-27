@@ -1,4 +1,5 @@
 class ApplicationsController < ApplicationController
+    wrap_parameters format: []
 
     def index
         user = User.find_by(id: session[:user_id])

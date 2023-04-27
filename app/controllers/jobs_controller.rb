@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+    wrap_parameters format: []
 
     def index
         jobs = Job.all

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 function ApplicationCard({application, eraseApplication}) {
 
     const [editFlag, setEditFlag] = useState(true)
@@ -15,8 +16,8 @@ function ApplicationCard({application, eraseApplication}) {
     
     function handleSubmit(e) {
         e.preventDefault()
-        fetch("/applications", {
-            method: "POST",
+        fetch(`/applications/${application.id}`, {
+            method: "PATCH",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)
         })
@@ -24,7 +25,10 @@ function ApplicationCard({application, eraseApplication}) {
             if (response.ok) {
                 response.json().then(data => console.log(data))
             } else {
-                response.json().then(data => setErrors(data.errors))
+                response.json().then(data => {
+                    console.log(data)
+                    setErrors(data.errors)
+                })
             }
         })
     }

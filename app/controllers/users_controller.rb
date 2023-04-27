@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-    wrap_parameters format: []
+    
+   
     rescue_from ActiveRecord::RecordInvalid, with: :render_errors
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
     
@@ -30,4 +31,5 @@ class UsersController < ApplicationController
         render json: {error: "Not Authorized"}, status: :unauthorized
     end
 
+  
 end

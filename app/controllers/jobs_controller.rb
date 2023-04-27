@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
-    wrap_parameters format: []
+    
+    
 
     def index
         jobs = Job.all
@@ -20,5 +21,7 @@ class JobsController < ApplicationController
     def strong_params
         params.permit(:name, :job_description, :pay)
     end
+
+   
 
 end

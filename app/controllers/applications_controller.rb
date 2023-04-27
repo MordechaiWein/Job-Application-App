@@ -20,6 +20,16 @@ class ApplicationsController < ApplicationController
         end
     end
 
+    def update
+        application = Application.find_by(id: params[:id])
+        application.update(strong_params)
+        if application.valid?
+            render json: application
+        else
+            render json: {errors: application.errors.full_messages}, status: :unprocessable_entity
+        end
+    end
+
     def destroy
         application = Application.find_by(id: params[:id])
         application.destroy

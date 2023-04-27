@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-
-function ApplicationCard({application, eraseApplication}) {
+function ApplicationCard({application, eraseApplication, editApplication }) {
 
     const [editFlag, setEditFlag] = useState(true)
     const [errors, setErrors] = useState([])
@@ -23,7 +22,11 @@ function ApplicationCard({application, eraseApplication}) {
         })
         .then((response) => {
             if (response.ok) {
-                response.json().then(data => console.log(data))
+                response.json().then(data => {
+                    console.log(data)
+                    setEditFlag(true)
+                    editApplication(data)
+                })
             } else {
                 response.json().then(data => {
                     console.log(data)
@@ -59,6 +62,7 @@ function ApplicationCard({application, eraseApplication}) {
             : 
             <div className="applicationForm">
             <h1 className="appCenter">{application.application_name} Application Form</h1> 
+            
             <h4 className="appCenter">We are an Equal Opportunity Employer and committed to excellence through diversity</h4>
             <hr className="hr"/>
             <br/>

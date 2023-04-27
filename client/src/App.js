@@ -23,6 +23,18 @@ function App() {
     const applicationsToDisplay = applications.filter(application => application.id !== erasedApplication.id)
     setApplications(applicationsToDisplay)
   }
+
+
+  function editApplication(updatedApplication) {
+    const updateApplication = applications.map((application) => {
+        if (application.id === updatedApplication.id) {
+        return updatedApplication
+        } else {
+        return application
+        }
+    })
+    setApplications(updateApplication)
+}
   
   if (!user) return  <Login/>
 
@@ -31,7 +43,7 @@ function App() {
       <Navigation />
       <Switch> 
         <Route exact path="/" >
-          <Home applications={applications} eraseApplication={eraseApplication}/>
+          <Home applications={applications} eraseApplication={eraseApplication} editApplication={editApplication}/>
         </Route>
         <Route exact path="/jobs" >
           <Jobs/>

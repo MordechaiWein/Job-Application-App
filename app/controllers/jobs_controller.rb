@@ -5,4 +5,7 @@ class JobsController < ApplicationController
         render json: jobs
     end
 
+    def create
+    end
+
 end

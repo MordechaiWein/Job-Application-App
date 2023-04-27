@@ -10,8 +10,8 @@ function Home({applications, eraseApplication, editApplication}) {
     
     return (
         <div className="homePage">
-             <h2>Welcome: {user.username}</h2>
-            <p>Bio: {user.bio}</p>
+             <h2>Welcome {user.username}</h2>
+            <p>{user.bio}</p>
             <br/>
             <h1>Your Job Applications:</h1>
             {JobApplications}

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     skip_before_action :authorize, only: [:create]
-    rescue_from ActiveRecord::RecordInvalid, with: :render_errors
+    rescue_from ActiveRecord::RecordInvalid, with: :render_user_errors
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
     
     def create
@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     
     def show
         user = User.find(session[:user_id])
-        render json: user
+        render json: user, status: :created
     end
     
     private
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
         params.permit(:username, :password, :password_confirmation, :image_url, :bio, :admin)
     end
 
-    def render_errors(instance)
+    def render_user_errors(instance)
         render json: {errors: instance.record.errors.full_messages }, status: :unprocessable_entity
     end
 

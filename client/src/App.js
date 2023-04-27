@@ -4,6 +4,7 @@ import Jobs from './Jobs';
 import Home from './Home';
 import Application from './Application';
 import Navigation from './Navigation';
+import Admin from './Admin';
 import { MyContext } from "./MyContext";
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
@@ -50,6 +51,9 @@ function App() {
         </Route>
         <Route path="/jobs/:id">
           <Application setApplications={setApplications} applications={applications}/>
+        </Route>
+        <Route path="/admin">
+          <Admin/>
         </Route>
       </Switch>
     </div>

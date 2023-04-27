@@ -50,7 +50,6 @@ function Admin() {
         })
     }
 
-
     if (user.admin === false) return (
         <div>
             <div className="App">
@@ -111,7 +110,7 @@ function Admin() {
                     <input onChange={handleChange} className="input" input type="text" name="pay" value={data.pay}/>
                     <br/>
                     <br/>
-                    {!errors ? "" : errors.map((error) => <li key={error} className="errors1">{error} !</li>)}
+                    {errors.map(error => <li key={error} className="errors1">{error} !</li>)}
                     <br/>
                     <input className="adminSubmit" type="submit"/>
                 </form>

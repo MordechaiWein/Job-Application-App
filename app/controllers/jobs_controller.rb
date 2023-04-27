@@ -18,7 +18,7 @@ class JobsController < ApplicationController
     end
 
     def render_job_errors(instance)
-        render json: { errors: instance.record.errors }, status: :unprocessable_entity
+        render json: { errors: instance.record.errors.full_messages }, status: :unprocessable_entity
     end
 
 end

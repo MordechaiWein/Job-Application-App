@@ -38,8 +38,7 @@ function SignUp() {
 
     return (
         <div>
-            <img src=""/>
-              <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <label className='label'>Username</label>
                 <br/>
                 <input onChange={handleChange} className='input' type="text" name="username" value={data.username}/>

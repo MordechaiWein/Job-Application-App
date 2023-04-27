@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Login from './Login';
 import Jobs from './Jobs';
 import Home from './Home';
@@ -11,6 +11,18 @@ import './App.css';
 function App() {
   
   const {user} = useContext(MyContext)
+  const [applications, setApplications] = useState([])
+
+  useEffect(() => {
+    fetch('/applications')
+    .then(response => response.json())
+    .then(data => setApplications(data))
+  },[])
+
+  function eraseApplication(erasedApplication) {
+    const applicationsToDisplay = applications.filter(application => application.id !== erasedApplication.id)
+    setApplications(applicationsToDisplay)
+  }
   
   if (!user) return  <Login/>
 
@@ -19,13 +31,13 @@ function App() {
       <Navigation />
       <Switch> 
         <Route exact path="/" >
-          <Home/>
+          <Home applications={applications} eraseApplication={eraseApplication}/>
         </Route>
         <Route exact path="/jobs" >
           <Jobs/>
         </Route>
         <Route path="/jobs/:id">
-          <Application/>
+          <Application setApplications={setApplications} applications={applications}/>
         </Route>
       </Switch>
     </div>

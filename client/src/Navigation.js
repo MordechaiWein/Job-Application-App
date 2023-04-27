@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function Navigation() {
 
-    const {setUser, user} = useContext(MyContext)
+    const {setUser} = useContext(MyContext)
     const linkStyles = {
         
         display: "inline-block",

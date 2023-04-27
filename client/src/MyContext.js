@@ -19,11 +19,7 @@ function MyProvider({children}) {
     useEffect(() => {
         fetch('/jobs')
         .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            setJobs(data)
-            
-        })
+        .then(data => setJobs(data))
     },[])
     
 

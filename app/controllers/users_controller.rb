@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     #me
     def show
         user = User.find(session[:user_id])
-        render json: user
+        render json: user, include: :applications
     end
 
  

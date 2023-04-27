@@ -28,12 +28,38 @@ code {
   font-weight: bold;
 }
 
+.label1 {
+  line-height: 40px;
+  font-weight: bold;
+  margin-left: 170px;
+}
+
+.inputASubmit {
+  width: 600px;
+  height: 40px;
+  border: solid 0.1px;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: white;
+  
+  
+}
+
 .input {
   width: 450px;
   height: 35px;
   border: solid 0.1px;
   border-radius: 5px;
   font-size: 18px;
+}
+
+.inputA {
+  width: 250px;
+  height: 35px;
+  border: solid 0.1px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-right: 30px;
 }
 
 .submit {
@@ -74,6 +100,14 @@ code {
   font-size: 18px;
 }
 
+.textInput1 {
+  width: 600px;
+  height: 80px;
+  border: solid 0.1px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
 .errors {
   color: red;
   background-color: mistyrose;
@@ -85,6 +119,11 @@ code {
   position: relative;
   padding: 15px; 
   padding-left: 45px;
+}
+
+.errors1 {
+  color: red;
+  font-style: italic;
 }
 
 .exclamtion {
@@ -160,3 +199,60 @@ padding: "20px";
   text-align: center;
   font-size: 50px;
  }
+
+ .applicationForm {
+  
+  width: 700px;
+  margin: auto;
+  border: solid 1px;
+  margin-top: 30px;
+  border-radius: 10px;
+
+ }
+
+ .appCenter{
+  text-align: center;
+ }
+
+ .appForm{
+  padding: 20px;
+ }
+
+ .appForm1{
+ padding-left: 20px;
+ }
+
+ .hr {
+  margin-left: 10px;
+  margin-right: 10px;
+ }
+
+ .homeBoard {
+
+ }
+
+ .homePage {
+  margin-left: 10px;
+ }
+
+ .aCName{
+  display: inline-block;
+ }
+
+ .aCB{
+  background-color: white;
+  color: green;
+  border: solid 1px;
+  width: 80px;
+  height: 50px;
+  border-radius: 5px;
+  font-weight: Bold;
+  float: right;
+  margin-right: 30px;
+ }
+
+ .aCB:hover{
+  background-color: green;
+  color: white;
+ }
+

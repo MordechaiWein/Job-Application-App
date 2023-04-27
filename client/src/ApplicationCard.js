@@ -1,24 +1,16 @@
-import React, { useState, useContext } from "react";
-import { MyContext } from "./MyContext";
-import { useParams, useHistory } from "react-router-dom";
+import React, { useState } from "react";
 
-function Application({setApplications, applications}) {
-    
-    const history = useHistory()
-    const {jobs, setUser, user} = useContext(MyContext)
-    const params = useParams()
+function ApplicationCard({application, eraseApplication}) {
+
+    const [editFlag, setEditFlag] = useState(true)
     const [errors, setErrors] = useState([])
-   
-    const jobName = jobs.find(job => parseInt(params.id) === job.id)
     const [data, setData] = useState({
-        first_name:"",
-        last_name:"",
-        age:"",
-        work_experience:"",
-        job_id: parseInt(params.id),
-        phone_number:"",
-        email_address:"",
-        application_name: jobName.name 
+        first_name: application.first_name,
+        last_name: application.last_name,
+        age: application.age,
+        work_experience: application.work_experience,
+        phone_number: application.phone_number,
+        email_address: application.email_address,
     })
     
     function handleSubmit(e) {
@@ -30,10 +22,7 @@ function Application({setApplications, applications}) {
         })
         .then((response) => {
             if (response.ok) {
-                response.json().then(data => {
-                    setApplications([...applications, data])
-                    history.push("/")
-                })
+                response.json().then(data => console.log(data))
             } else {
                 response.json().then(data => setErrors(data.errors))
             }
@@ -44,11 +33,28 @@ function Application({setApplications, applications}) {
         setData({...data,[event.target.name]: event.target.value})
     }
 
+    
+    function handleClick() {
+        fetch(`/applications/${application.id}`, {
+            method: "DELETE" 
+        })
+        .then(response => response.json())
+        .then(data => eraseApplication(data))
+    }
 
 
     return (
-        <div className="applicationForm">
-            {jobName ? <h1 className="appCenter">{jobName.name} Application Form</h1> : "loading"}
+        <div>
+            <hr/>
+            <h1 className="aCName">{application.application_name} Application</h1>
+            <button className="aCB" onClick={() => setEditFlag(false)}>Edit</button>
+            <button className="aCB" onClick={handleClick}>Delete</button>
+            <br/>
+            {editFlag ? 
+                "" 
+            : 
+            <div className="applicationForm">
+            <h1 className="appCenter">{application.application_name} Application Form</h1> 
             <h4 className="appCenter">We are an Equal Opportunity Employer and committed to excellence through diversity</h4>
             <hr className="hr"/>
             <br/>
@@ -85,7 +91,10 @@ function Application({setApplications, applications}) {
                 <input className='inputASubmit' type="submit" value="Submit Application"/>
             </form>
         </div>
+            }
+        </div>
     )
+  
 }
 
-export default Application
+export default ApplicationCard

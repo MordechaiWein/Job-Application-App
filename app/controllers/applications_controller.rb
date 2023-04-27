@@ -1,6 +1,7 @@
 class ApplicationsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_application_errors
     
+    
     def index
         user = User.find_by(id: session[:user_id])
         render json: user.applications

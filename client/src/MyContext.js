@@ -24,9 +24,11 @@ function MyProvider({children}) {
     },[])
 
     useEffect(() => {
-        fetch('/applications')
-        .then(response => response.json())
-        .then(data => setApplications(data))
+        if (user) {
+            fetch('/applications')
+            .then(response => response.json())
+            .then(data => setApplications(data))
+        }
     },[])
 
     function eraseApplication(erasedApplication) {

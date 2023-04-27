@@ -43,9 +43,7 @@ function Application() {
     function handleChange(event) {
         setData({...data,[event.target.name]: event.target.value})
     }
-
-
-
+    
     return (
         <div className="applicationForm">
             {jobName ? <h1 className="appCenter">{jobName.name} Application Form</h1> : "loading"}

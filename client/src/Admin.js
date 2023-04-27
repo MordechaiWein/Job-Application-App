@@ -61,7 +61,6 @@ function Admin() {
                 <button className="becomeAdmin" onClick={handleClick}>Become an admin</button>
                 <h1>{admin}</h1>
             </div>
-         
             <br />
             {flag ? 
                 "" 
@@ -117,7 +116,6 @@ function Admin() {
                     <input className="adminSubmit" type="submit"/>
                 </form>
            </div>
-       
         </div>
     )
 }

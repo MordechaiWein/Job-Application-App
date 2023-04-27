@@ -33,9 +33,7 @@ function SignUp() {
     function handleChange(event) {
         setData({...data,[event.target.name]: event.target.value})
     }
-
-
-
+    
     return (
         <div>
             <form onSubmit={handleSubmit}>

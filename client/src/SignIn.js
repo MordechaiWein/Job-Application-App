@@ -29,23 +29,21 @@ function SignIn() {
     function handleChange(event) {
         setData({...data,[event.target.name]: event.target.value})
     }
-
-
-
+    
     return (
         <div>
-         <form onSubmit={handleSubmit}>
-            <label className='label'>Username</label>
-            <br />
-            <input onChange={handleChange} className='input' type="text" name="username" value={data.username}/>
-            <br />
-            <label className='label'>Password</label>
-            <br />
-            <input onChange={handleChange} className='input' type="password" name="password" value={data.password}/>
-            <br/>
-            <input className='submit' type="submit" value="Login"/>
-            { !errors ? "" : <p className="errors"> <p className="exclamtion">❗️</p>{errors} </p>}
-         </form>
+            <form onSubmit={handleSubmit}>
+                <label className='label'>Username</label>
+                <br />
+                <input onChange={handleChange} className='input' type="text" name="username" value={data.username}/>
+                <br />
+                <label className='label'>Password</label>
+                <br />
+                <input onChange={handleChange} className='input' type="password" name="password" value={data.password}/>
+                <br/>
+                <input className='submit' type="submit" value="Login"/>
+                { !errors ? "" : <p className="errors"> <p className="exclamtion">❗️</p>{errors} </p>}
+            </form>
         </div>
     )
 }

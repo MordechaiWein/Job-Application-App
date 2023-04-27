@@ -7,7 +7,6 @@ function Home() {
     const {user, applications} = useContext(MyContext)
     const JobApplications = applications.map(application => <ApplicationCard key={application.id} application={application}/>)
     
-    
     return (
         <div className="homePage">
              <h2>Welcome {user.username}</h2>

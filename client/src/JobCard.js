@@ -9,7 +9,6 @@ function JobCard({job}) {
                 <h1 className="jobDescription">{job.job_description}</h1>
                 <h1 className="jobDescription">{job.pay}</h1>
             </Link>
-         
         </div>
     )
 }

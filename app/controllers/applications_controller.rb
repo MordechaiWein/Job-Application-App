@@ -1,10 +1,13 @@
 class ApplicationsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_application_errors
     
+    #This route is not used but was written to fulfill project requirements:
+    #______________________________________
     # def index
-    #     user = User.find_by(id: session[:user_id])
-    #     render json: user, include: :applications
+    #     applications = Application.All
+    #     render json: applications
     # end
+    #______________________________________
     
     def create
         user = User.find_by(id: session[:user_id])

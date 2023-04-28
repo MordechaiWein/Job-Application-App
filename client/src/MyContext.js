@@ -12,7 +12,12 @@ function MyProvider({children}) {
         fetch("/me")
         .then((response) => {
             if (response.ok) {
-                response.json().then(data => setUser(data))
+                response.json().then(data => {
+                    console.log("hi")
+                    
+                    setUser(data)
+                    setApplications(data.applications)
+                })
             }
         })
     },[])
@@ -23,13 +28,22 @@ function MyProvider({children}) {
         .then(data => setJobs(data))
     },[])
 
-    useEffect(() => {
-        if (user) {
-            fetch('/applications')
-            .then(response => response.json())
-            .then(data => setApplications(data))
-        }
-    },[])
+    // useEffect(() => {
+    //     fetch('/applications')
+    //     .then(response => response.json())
+    //     .then(data => setApplications(data))
+    // },[user])
+
+    // useEffect(() => {
+    //     if (user !== null) {
+    //         fetch('/applications')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             console.log(data.applications)
+    //             setApplications(data.applications)
+    //         })
+    //     }
+    // },[])
 
     function eraseApplication(erasedApplication) {
         const applicationsToDisplay = applications.filter(application => application.id !== erasedApplication.id)

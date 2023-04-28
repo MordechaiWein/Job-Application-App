@@ -5,16 +5,16 @@ import { MyContext } from "./MyContext";
 function Home() {
 
     const {user, applications} = useContext(MyContext)
-    const JobApplications = applications.map(application => <ApplicationCard key={application.id} application={application}/>)
+    const JobApplications = applications ? applications.map(application => <ApplicationCard key={application.id} application={application}/>) : []
     
     return (
         <div className="homePage">
-             <h2>Welcome {user.username}</h2>
-            <p>{user.bio}</p>
+             <h2 className="homeName">👋 Welcome {user.username}</h2>
+             <p className="homeBio">{user.bio}</p>
             <br/>
-            <h1>Your Job Applications:</h1>
+            <h1 className="yja">Your Job Applications:</h1>
             {JobApplications}
-            <hr/>
+           
         </div>
     )
 }

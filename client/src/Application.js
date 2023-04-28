@@ -9,7 +9,7 @@ function Application() {
     const params = useParams()
     const [errors, setErrors] = useState([])
    
-    const jobName = jobs ? jobs.find(job => parseInt(params.id) === job.id) : null;
+    const jobName = jobs ? jobs.find(job => parseInt(params.id) === job.id) : [];
    
     const [data, setData] = useState({
         first_name:"",

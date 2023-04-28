@@ -3,7 +3,7 @@ import { MyContext } from "./MyContext";
 
 function SignIn() {
 
-    const {setUser} = useContext(MyContext)
+    const {setUser, setApplications} = useContext(MyContext)
     const [errors, setErrors] = useState(null)
     const [data, setData] = useState({
         username:"",
@@ -19,7 +19,10 @@ function SignIn() {
         })
         .then((response) => {
             if (response.ok) {
-                response.json().then(data => setUser(data))
+                response.json().then(data => {
+                    setUser(data)
+                    setApplications(data.applications)
+                })
             } else {
                 response.json().then(data => setErrors(data.errors))
             }

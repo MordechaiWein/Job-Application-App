@@ -41,8 +41,11 @@ code {
   border-radius: 5px;
   font-size: 18px;
   background-color: white;
-  
-  
+}
+
+.inputASubmit:hover {
+  color: white;
+  background-color: green;
 }
 
 .input {
@@ -140,16 +143,16 @@ code {
 background-color: green;
 padding: 15px;
 box-shadow: 5px 5px 5px 5px lightgray;
+justify-content:space-between;
+display: flex;
 }
 
 .navTitle {
   color: white;
   font-size: 30px;
-  margin-bottom: 0px;
-  display: inline-block;
-  padding: "20px";
-  margin: 2 6px 6px;
 }
+
+
 
 .logout{
 display: inline;
@@ -165,8 +168,11 @@ padding: "20px";
 }
 
 .right {
-  display:inline-block;
-  margin-left: 1050px;
+  padding: 25px;
+}
+
+.right:hover {
+color: darkgreen;
 }
 
 
@@ -229,9 +235,7 @@ padding: "20px";
   margin-right: 10px;
  }
 
- .homeBoard {
 
- }
 
  .homePage {
   margin-left: 10px;
@@ -239,6 +243,7 @@ padding: "20px";
 
  .aCName{
   display: inline-block;
+  color: #333333;
  }
 
  .aCB{
@@ -249,9 +254,13 @@ padding: "20px";
   height: 50px;
   border-radius: 5px;
   font-weight: Bold;
-  float: right;
   margin-right: 30px;
+  margin-top: 20px;
+  float: right;
  }
+
+
+
 
  .aCB:hover{
   background-color: green;
@@ -308,5 +317,29 @@ padding: "20px";
   
  }
 
+ .homeName {
+  
+  font-family: cursive;
+  font-size: 30px;
+}
 
+.homeBio {
+  margin-top: -25px;
+  margin-left: 40px;
+}
 
+.yja {
+  color: #333333;
+}
+
+.homeCard{
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+.italic {
+  font-style: italic;
+  padding-bottom: 8px;
+  color: green;
+}

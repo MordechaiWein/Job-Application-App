@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+    skip_before_action :authorize, only: [:index]
     rescue_from ActiveRecord::RecordInvalid, with: :render_job_errors
     
     def index

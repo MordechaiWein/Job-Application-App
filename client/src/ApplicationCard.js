@@ -50,11 +50,14 @@ function ApplicationCard({application}) {
 
     return (
         <div>
-            <hr/>
-            <h1 className="aCName">{application.application_name} Application</h1>
-            <button className="aCB" onClick={() => setEditFlag(false)}>Edit</button>
-            <button className="aCB" onClick={handleClick}>Delete</button>
-            <br/>
+            <div className="homeCard">
+                <h1 className="aCName">{application.application_name} Application</h1>
+                
+               
+               <button className="aCB" onClick={() => setEditFlag(false)}>Edit</button>
+               <button className="aCB" onClick={handleClick}>Delete</button>
+               <li className="italic">{application.first_name} {application.last_name}  &nbsp; {application.phone_number} &nbsp; {application.email_address}</li> 
+            </div>
             {editFlag ? 
                 "" 
             : 

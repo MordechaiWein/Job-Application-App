@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { MyContext } from "./MyContext";
 
-function ApplicationCard({application}) {
+function HomeCard({application}) {
 
     const {eraseApplication, editApplication } = useContext(MyContext)
     const [editFlag, setEditFlag] = useState(true)
@@ -106,4 +106,4 @@ function ApplicationCard({application}) {
     )
 }
 
-export default ApplicationCard
+export default HomeCard

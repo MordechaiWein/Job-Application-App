@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { MyContext } from "./MyContext";
 import { useParams, useHistory } from "react-router-dom";
 
-function Application() {
+function JobForm() {
     
     const history = useHistory()
     const {jobs, setApplications, applications} = useContext(MyContext)
@@ -87,4 +87,4 @@ function Application() {
     )
 }
 
-export default Application
+export default JobForm

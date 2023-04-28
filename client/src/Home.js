@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import ApplicationCard from "./ApplicationCard";
+import HomeCard from "./HomeCard";
 import { MyContext } from "./MyContext";
 
 function Home() {
 
     const {user, applications} = useContext(MyContext)
-    const JobApplications = applications.map(application => <ApplicationCard key={application.id} application={application}/>) 
+    const JobApplications = applications.map(application => <HomeCard key={application.id} application={application}/>) 
     
     return (
         <div className="homePage">
@@ -14,7 +14,6 @@ function Home() {
             <br/>
             <h1 className="yja">Your Job Applications:</h1>
             {JobApplications}
-           
         </div>
     )
 }

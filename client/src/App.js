@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Login from './Login';
 import Jobs from './Jobs';
 import Home from './Home';
-import Application from './Application';
+import JobForm from './JobForm';
 import Navigation from './Navigation';
 import Admin from './Admin';
 import { MyContext } from "./MyContext";
@@ -26,7 +26,7 @@ function App() {
           <Jobs/>
         </Route>
         <Route path="/jobs/:id">
-          <Application />
+          <JobForm />
         </Route>
         <Route path="/admin">
           <Admin/>

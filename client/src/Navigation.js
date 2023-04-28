@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { MyContext } from "./MyContext";
 import { NavLink, useHistory } from "react-router-dom";
 
-
 function Navigation() {
   
   const {setUser} = useContext(MyContext)

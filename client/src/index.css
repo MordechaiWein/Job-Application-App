@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
+  
+  
 }
 
 code {
@@ -92,7 +95,11 @@ code {
   width: 80px;
   font-weight: bold;
   font-size: 15px;
-  
+}
+
+.logInButton:hover {
+  color: white;
+  background-color: green;
 }
 
 .textInput {

@@ -13,7 +13,7 @@ function App() {
   
   const {user} = useContext(MyContext)
   
-  if (!user) return  <Login/>
+  if (!user) return <Login/>
 
   return (
     <div>

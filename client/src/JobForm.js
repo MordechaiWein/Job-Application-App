@@ -56,19 +56,19 @@ function JobForm() {
                 <label className='label'>Name</label>
                 <br/>
                 <br/>
-                <input className='inputA' onChange={handleChange} value={data.first_name} name="first_name" type="text" placeholder="first name"/> <input className='inputA' onChange={handleChange} value={data.last_name} name="last_name"  type="text" placeholder="last name"/>
+                <input className='homeInput' onChange={handleChange} value={data.first_name} name="first_name" type="text" placeholder="first name"/> <input className='homeInput' onChange={handleChange} value={data.last_name} name="last_name"  type="text" placeholder="last name"/>
                 <br/>
                 <br/>
                 <label className='label'>Phone Number</label> <label className='label1'>Email</label>
                 <br/>
                 <br/>
-                <input className='inputA' onChange={handleChange} value={data.phone_number} name="phone_number"  type="text"/> <input className='inputA' onChange={handleChange}  value={data.email_address} name="email_address" type="text" />
+                <input className='homeInput' onChange={handleChange} value={data.phone_number} name="phone_number"  type="text"/> <input className='homeInput' onChange={handleChange}  value={data.email_address} name="email_address" type="text" />
                 <br/>
                 <br/>
                 <label className='label' >Age</label>
                 <br/>
                 <br/>
-                <input className='inputA' onChange={handleChange} value={data.age} name="age" type="number"/>
+                <input className='homeInput' onChange={handleChange} value={data.age} name="age" type="number"/>
                 <br/>
                 <br/>
                 <label className='label'>Work experience</label>
@@ -77,11 +77,11 @@ function JobForm() {
                 <textarea className='textInput1' onChange={handleChange} value={data.work_experience} name="work_experience"/>
                 <br/>
                 <br/>
-                {!errors ? "" : errors.map((error) => <li key={error} className="errors1">{error} !</li>)}
+                {!errors ? "" : errors.map((error) => <li key={error} className="generalErrors">{error} !</li>)}
                 <label className='label'>Submit Application</label>
                 <br/>
                 <br/>
-                <input className='inputASubmit' type="submit" value="Submit Application"/>
+                <input className='homeSubmit' type="submit" value="Submit Application"/>
             </form>
         </div>
     )

@@ -14,8 +14,7 @@ function Admin() {
         job_description:"",
         pay:""
     })
-   
-
+    
     function handleSubmit(e) {
         e.preventDefault()
         setAdmin("Thank you! your request has been submitted")
@@ -110,7 +109,7 @@ function Admin() {
                     <input onChange={handleChange} className="input" input type="text" name="pay" value={data.pay}/>
                     <br/>
                     <br/>
-                    {errors.map(error => <li key={error} className="errors1">{error} !</li>)}
+                    {errors.map(error => <li key={error} className="generalErrors">{error} !</li>)}
                     <br/>
                     <input className="adminSubmit" type="submit"/>
                 </form>

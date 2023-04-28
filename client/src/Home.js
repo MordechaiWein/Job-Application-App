@@ -9,10 +9,10 @@ function Home() {
     
     return (
         <div className="homePage">
-             <h2 className="homeName">👋 Welcome {user.username}</h2>
-             <p className="homeBio">{user.bio}</p>
+            <h2 className="homeName">👋 Welcome {user.username}</h2>
+            <p className="homeBio">{user.bio}</p>
             <br/>
-            <h1 className="yja">Your Job Applications:</h1>
+            <h1 className="homeApplication">Your Job Applications:</h1>
             {JobApplications}
         </div>
     )

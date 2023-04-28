@@ -45,7 +45,7 @@ function SignIn() {
                 <input onChange={handleChange} className='input' type="password" name="password" value={data.password}/>
                 <br/>
                 <input className='submit' type="submit" value="Login"/>
-                { !errors ? "" : <p className="errors"> <p className="exclamtion">❗️</p>{errors} </p>}
+                { !errors ? "" : <p className="errors"> <p className="exclamtion">❗️</p>{errors} </p> }
             </form>
         </div>
     )

@@ -1,10 +1,11 @@
 class ApplicationsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_application_errors
-    
+    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
+  
     #This route is not used but was written to fulfill project requirements:
     #______________________________________
     # def index
-    #     applications = Application.All
+    #     applications = Application.all
     #     render json: applications
     # end
     #______________________________________
@@ -20,17 +21,19 @@ class ApplicationsController < ApplicationController
     end
 
     def update
-        application = Application.find_by(id: params[:id])
+        user = User.find(session[:user_id])
+        application = user.applications.find(params[:id])
         application.update!(strong_params)
         render json: application
     end
-
+    
     def destroy
-        application = Application.find_by(id: params[:id])
+        user = User.find(session[:user_id])
+        application = user.applications.find(params[:id])
         application.destroy
         render json: application
     end
-
+    
     private 
 
     def strong_params
@@ -40,7 +43,14 @@ class ApplicationsController < ApplicationController
     def render_application_errors(instance)
         render json: {errors: instance.record.errors.full_messages }, status: :unprocessable_entity
     end
+    
+    def render_not_found
+        render json: { error: "Not Authorized" }, status: :unauthorized
+    end
 
 end
+
+
+
 
 

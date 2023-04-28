@@ -5,14 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
-  
-  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.loginCenter {
+  width: 455px;
+  margin: auto;
 }
 
 .loginTitle {
@@ -21,10 +23,7 @@ code {
   font-style: italic;
   font-size: 53px;
   margin-bottom: 0px;
-  
 }
-
-
 
 .label{
   line-height: 40px;
@@ -37,7 +36,7 @@ code {
   margin-left: 170px;
 }
 
-.inputASubmit {
+.homeSubmit {
   width: 600px;
   height: 40px;
   border: solid 0.1px;
@@ -46,7 +45,7 @@ code {
   background-color: white;
 }
 
-.inputASubmit:hover {
+.homeSubmit:hover {
   color: white;
   background-color: green;
 }
@@ -59,7 +58,7 @@ code {
   font-size: 18px;
 }
 
-.inputA {
+.homeInput {
   width: 250px;
   height: 35px;
   border: solid 0.1px;
@@ -78,12 +77,6 @@ code {
   height: 35px;
   border-radius: 5px;
   margin-top: 25px;
-}
-
-
-.loginCenter {
-  width: 455px;
-  margin: auto;
 }
 
 .logInButton {
@@ -131,15 +124,15 @@ code {
   padding-left: 45px;
 }
 
-.errors1 {
+.generalErrors {
   color: red;
   font-style: italic;
 }
 
 .exclamtion {
   position: absolute;
-  top: 9px; /* adjust this value as needed */
-  left: 24px; /* adjust this value as needed */
+  top: 9px; 
+  left: 24px; 
   background-color: white;
   padding: 8px;
   border-radius: 50%;
@@ -159,8 +152,6 @@ display: flex;
   font-size: 30px;
 }
 
-
-
 .logout{
 display: inline;
 background-color: white;
@@ -178,12 +169,6 @@ padding: "20px";
   padding: 25px;
 }
 
-.right:hover {
-color: darkgreen;
-}
-
-
- 
 .card {
   width: 25rem;
   height: 10rem;
@@ -216,44 +201,40 @@ color: darkgreen;
  }
 
  .applicationForm {
-  
   width: 700px;
   margin: auto;
   border: solid 1px;
   margin-top: 30px;
   border-radius: 10px;
+}
 
- }
-
- .appCenter{
+.appCenter{
   text-align: center;
- }
+}
 
- .appForm{
+.appForm{
   padding: 20px;
- }
+}
 
- .appForm1{
+.personalInformation{
  padding-left: 20px;
- }
+}
 
- .hr {
+.hr {
   margin-left: 10px;
   margin-right: 10px;
- }
+}
 
-
-
- .homePage {
+.homePage {
   margin-left: 10px;
- }
+}
 
- .aCName{
+.nameCard{
   display: inline-block;
   color: #333333;
- }
+}
 
- .aCB{
+.homeButtons{
   background-color: white;
   color: green;
   border: solid 1px;
@@ -264,25 +245,22 @@ color: darkgreen;
   margin-right: 30px;
   margin-top: 20px;
   float: right;
- }
+}
 
-
-
-
- .aCB:hover{
+.homeButtons:hover{
   background-color: green;
   color: white;
- }
+}
 
- .adminRequest {
+.adminRequest {
   width: 500px;
   border: solid 1px;
   margin: auto;
   padding: 20px;
   border-radius: 5px;
- }
+}
 
- .adminSubmit {
+.adminSubmit {
   color: green;
   background-color: white;
   font-weight: bold;
@@ -291,15 +269,14 @@ color: darkgreen;
   width: 100px;
   height: 50px;
   font-size: 18px;
- }
+}
 
-
- .adminSubmit:hover{
+.adminSubmit:hover{
   background-color: green;
   color: white;
- }
+}
 
- .becomeAdmin {
+.becomeAdmin {
   color: green;
   background-color: white;
   font-weight: bold;
@@ -308,24 +285,22 @@ color: darkgreen;
   width: 200px;
   height: 50px;
   font-size: 18px;
- }
+}
 
- .becomeAdmin:hover{
+.becomeAdmin:hover{
   background-color: green;
   color: white;
- }
+}
 
- .adminForm {
+.adminForm {
   width:500px;
   border: solid 1px;
   margin: auto;
   border-radius: 5px;
   padding: 20px;
-  
- }
+}
 
- .homeName {
-  
+.homeName {
   font-family: cursive;
   font-size: 30px;
 }
@@ -335,7 +310,7 @@ color: darkgreen;
   margin-left: 40px;
 }
 
-.yja {
+.homeApplication {
   color: #333333;
 }
 

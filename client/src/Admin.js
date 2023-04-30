@@ -103,13 +103,13 @@ function Admin() {
                     <textarea onChange={handleChange}  className="textInput" input type="text" name="job_description" value={data.job_description}/>
                     <br/>
                     <br/>
-                    <label className="label">Salary</label>
+                    <label className="label">Pay</label>
                     <br/>
                     <br/>
                     <input onChange={handleChange} className="input" input type="text" name="pay" value={data.pay}/>
                     <br/>
                     <br/>
-                    {errors.map(error => <li key={error} className="generalErrors">{error} !</li>)}
+                    {errors.map(error => <li key={error} className="generalErrors">{error}</li>)}
                     <br/>
                     <input className="adminSubmit" type="submit"/>
                 </form>

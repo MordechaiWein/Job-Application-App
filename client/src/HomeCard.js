@@ -91,7 +91,7 @@ function HomeCard({application}) {
                         <textarea className='textInput1' onChange={handleChange} value={data.work_experience} name="work_experience"/>
                         <br/>
                         <br/>
-                        {!errors ? "" : errors.map((error) => <li key={error} className="generalErrors">{error} !</li>)}
+                        {!errors ? "" : errors.map((error) => <li key={error} className="generalErrors">{error}</li>)}
                         <label className='label'>Submit Application</label>
                         <br/>
                         <br/>

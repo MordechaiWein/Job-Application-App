@@ -156,8 +156,8 @@ code {
 }
 
 .errors {
-  color: red;
-  background-color: mistyrose;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.60);
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -166,6 +166,7 @@ code {
   position: relative;
   padding: 15px; 
   padding-left: 45px;
+  width: 420px;
 }
 
 .generalErrors {

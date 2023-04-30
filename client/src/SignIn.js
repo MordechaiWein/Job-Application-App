@@ -36,15 +36,15 @@ function SignIn() {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label className='label'>Username</label>
+                <label className='signLabel'>Username</label>
                 <br />
-                <input onChange={handleChange} className='input' type="text" name="username" value={data.username}/>
+                <input onChange={handleChange} className='signInput' type="text" name="username" value={data.username}/>
                 <br />
-                <label className='label'>Password</label>
+                <label className='signLabel'>Password</label>
                 <br />
-                <input onChange={handleChange} className='input' type="password" name="password" value={data.password}/>
+                <input onChange={handleChange} className='signInput' type="password" name="password" value={data.password}/>
                 <br/>
-                <input className='submit' type="submit" value="Login"/>
+                <input className='signSubmit' type="submit" value="Login"/>
                 { !errors ? "" : <p className="errors"> <p className="exclamtion">❗️</p>{errors} </p> }
             </form>
         </div>

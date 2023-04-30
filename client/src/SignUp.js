@@ -37,26 +37,26 @@ function SignUp() {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label className='label'>Username</label>
+                <label className='signLabel'>Username</label>
                 <br/>
-                <input onChange={handleChange} className='input' type="text" name="username" value={data.username}/>
+                <input onChange={handleChange} className='signInput' type="text" name="username" value={data.username}/>
                 <br />
-                <label className='label'>Password</label>
+                <label className='signLabel'>Password</label>
                 <br />
-                <input onChange={handleChange} className='input' type="password" name="password" value={data.password}/>
+                <input onChange={handleChange} className='signInput' type="password" name="password" value={data.password}/>
                 <br/>
-                <label className='label'>Password Confirmation</label>
+                <label className='signLabel'>Password Confirmation</label>
                 <br />
-                <input onChange={handleChange} className='input' type="password" name="password_confirmation" value={data.password_confirmation}/>
+                <input onChange={handleChange} className='signInput' type="password" name="password_confirmation" value={data.password_confirmation}/>
                 <br />
-                <label className='label'>Profile Image</label>
+                <label className='signLabel'>Profile Image</label>
                 <br />
-                <input onChange={handleChange} className='input' type="text" name="image_url" value={data.image_url}/>
+                <input onChange={handleChange} className='signInput' type="text" name="image_url" value={data.image_url}/>
                 <br />
-                <label className='label'>Bio</label>
+                <label className='signLabel'>Bio</label>
                 <br />
-                <textarea onChange={handleChange} className='textInput' name="bio" value={data.bio}/>
-                <input className='submit' type="submit" value="Sign Up"/>
+                <textarea onChange={handleChange} className='signTextInput' name="bio" value={data.bio}/>
+                <input className='signSubmit' type="submit" value="Sign Up"/>
                 {errors.map((error) => <p key={error} className="errors"><p className="exclamtion">❗️</p>{error}</p>)}
             </form> 
         </div>

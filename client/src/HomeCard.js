@@ -55,7 +55,7 @@ function HomeCard({application}) {
                 <h1 className="nameCard">{application.application_name} Application</h1>
                 <button className="homeButtons" onClick={() => setEditFlag(!editFlag)}>Edit</button>
                 <button className="homeButtons" onClick={handleClick}>Delete</button>
-                <li className="italic">{application.first_name} {application.last_name}  &nbsp; {application.phone_number} &nbsp; {application.email_address}</li> 
+                <li className="italic">{application.first_name} {application.last_name} &nbsp; {application.phone_number} &nbsp; {application.email_address} &nbsp; {application.work_experience}</li> 
             </div>
             {editFlag ? 
                 "" 

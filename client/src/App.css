@@ -14,14 +14,11 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: url("https://img.business.com/w/700/aHR0cHM6Ly9pbWFnZXMuYnVzaW5lc3NuZXdzZGFpbHkuY29tL2FwcC91cGxvYWRzLzIwMjIvMDQvMDQwODA3MjgvQmFja2dyb3VuZF9DaGVja19JYW1zdG9ja2VyX0dldHR5LmpwZw==");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App-link {

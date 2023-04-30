@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import { MyProvider } from "./MyContext"
 import { BrowserRouter as Router } from 'react-router-dom';
 
-
 ReactDOM.render(
   <Router>
     <MyProvider>

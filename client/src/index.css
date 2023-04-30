@@ -12,17 +12,27 @@ code {
     monospace;
 }
 
+.accountQuest {
+  color: white;
+}
+
 .loginCenter {
-  width: 455px;
+  width: 665px;
   margin: auto;
+  background-color: rgba(0, 0, 0, 0.60); 
+  padding: 40px;
 }
 
 .loginTitle {
-  color: green;
-  font-family: cursive;
-  font-style: italic;
-  font-size: 53px;
+  color: mistyrose;
+  font-size: 70px;
   margin-bottom: 0px;
+}
+
+.signLabel{
+  line-height: 40px;
+  font-weight: bold;
+  color: white;
 }
 
 .label{
@@ -47,11 +57,19 @@ code {
 
 .homeSubmit:hover {
   color: white;
-  background-color: green;
+  background-color: purple;
 }
 
 .input {
   width: 450px;
+  height: 35px;
+  border: solid 0.1px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.signInput {
+  width: 470px;
   height: 35px;
   border: solid 0.1px;
   border-radius: 5px;
@@ -68,7 +86,7 @@ code {
 }
 
 .submit {
-  background-color: green;
+  background-color: purple;
   border: none;
   color: white;
   font-weight: bold;
@@ -79,11 +97,27 @@ code {
   margin-top: 25px;
 }
 
+.signSubmit {
+  background-color: purple;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  width: 470px;
+  height: 45px;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+.signSubmit:hover {
+  background-color: darkmagenta;
+}
+
 .logInButton {
   border-radius: 5px;
   border: solid 1px;
-  background-color: white;
-  color: green;
+  background-color: mistyrose;
+  color: purple;
   height: 35px;
   width: 80px;
   font-weight: bold;
@@ -92,11 +126,21 @@ code {
 
 .logInButton:hover {
   color: white;
-  background-color: green;
+  background-color: purple;
+  border: none;
+  
 }
 
 .textInput {
   width: 450px;
+  height: 80px;
+  border: solid 0.1px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.signTextInput {
+  width: 470px;
   height: 80px;
   border: solid 0.1px;
   border-radius: 5px;
@@ -140,7 +184,7 @@ code {
 }
 
 .navigation {
-background-color: green;
+background-color: purple;
 padding: 15px;
 box-shadow: 5px 5px 5px 5px lightgray;
 justify-content:space-between;
@@ -155,7 +199,7 @@ display: flex;
 .logout{
 display: inline;
 background-color: white;
-color: green;
+color: purple;
 font-weight: bold;
 border: solid 1px;
 border-radius: 5px;
@@ -195,7 +239,7 @@ padding: "20px";
  }
 
  .apply {
-  color: green;
+  color: purple;
   text-align: center;
   font-size: 50px;
  }
@@ -214,6 +258,10 @@ padding: "20px";
 
 .appForm{
   padding: 20px;
+}
+
+.appForm1{
+  padding-left: 20px;
 }
 
 .personalInformation{
@@ -236,7 +284,7 @@ padding: "20px";
 
 .homeButtons{
   background-color: white;
-  color: green;
+  color: purple;
   border: solid 1px;
   width: 80px;
   height: 50px;
@@ -248,7 +296,7 @@ padding: "20px";
 }
 
 .homeButtons:hover{
-  background-color: green;
+  background-color: purple;
   color: white;
 }
 
@@ -261,7 +309,7 @@ padding: "20px";
 }
 
 .adminSubmit {
-  color: green;
+  color: purple;
   background-color: white;
   font-weight: bold;
   border-radius: 5px;
@@ -272,12 +320,12 @@ padding: "20px";
 }
 
 .adminSubmit:hover{
-  background-color: green;
+  background-color: purple;
   color: white;
 }
 
 .becomeAdmin {
-  color: green;
+  color: purple;
   background-color: white;
   font-weight: bold;
   border-radius: 5px;
@@ -288,7 +336,7 @@ padding: "20px";
 }
 
 .becomeAdmin:hover{
-  background-color: green;
+  background-color: purple;
   color: white;
 }
 
@@ -323,5 +371,5 @@ padding: "20px";
 .italic {
   font-style: italic;
   padding-bottom: 8px;
-  color: green;
+  color: purple;
 }

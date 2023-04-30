@@ -57,7 +57,7 @@ code {
 
 .homeSubmit:hover {
   color: white;
-  background-color: purple;
+  background-color: green;
 }
 
 .input {
@@ -188,7 +188,7 @@ code {
 }
 
 .navigation {
-background-color: purple;
+background-color: green;
 padding: 15px;
 box-shadow: 5px 5px 5px 5px lightgray;
 justify-content:space-between;
@@ -198,12 +198,13 @@ display: flex;
 .navTitle {
   color: white;
   font-size: 30px;
+  margin-left: 5px;
 }
 
 .logout{
 display: inline;
 background-color: white;
-color: purple;
+color: green;
 font-weight: bold;
 border: solid 1px;
 border-radius: 5px;
@@ -226,6 +227,11 @@ padding: "20px";
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
  }
 
+ .card:hover {
+  background-color: #F5F5F5;
+  
+ }
+
  .jobDescription {
   color: #333333;
   font-size: 15px;
@@ -243,7 +249,7 @@ padding: "20px";
  }
 
  .apply {
-  color: purple;
+  color: green;
   text-align: center;
   font-size: 50px;
  }
@@ -288,7 +294,7 @@ padding: "20px";
 
 .homeButtons{
   background-color: white;
-  color: purple;
+  color: green;
   border: solid 1px;
   width: 80px;
   height: 50px;
@@ -300,7 +306,7 @@ padding: "20px";
 }
 
 .homeButtons:hover{
-  background-color: purple;
+  background-color: green;
   color: white;
 }
 
@@ -313,7 +319,7 @@ padding: "20px";
 }
 
 .adminSubmit {
-  color: purple;
+  color: green;
   background-color: white;
   font-weight: bold;
   border-radius: 5px;
@@ -324,12 +330,12 @@ padding: "20px";
 }
 
 .adminSubmit:hover{
-  background-color: purple;
+  background-color: green;
   color: white;
 }
 
 .becomeAdmin {
-  color: purple;
+  color: green;
   background-color: white;
   font-weight: bold;
   border-radius: 5px;
@@ -340,7 +346,7 @@ padding: "20px";
 }
 
 .becomeAdmin:hover{
-  background-color: purple;
+  background-color: green;
   color: white;
 }
 
@@ -355,11 +361,12 @@ padding: "20px";
 .homeName {
   font-family: cursive;
   font-size: 30px;
+  margin-left: 10px;
 }
 
 .homeBio {
   margin-top: -25px;
-  margin-left: 40px;
+  margin-left: 110px;
 }
 
 .homeApplication {
@@ -376,5 +383,27 @@ padding: "20px";
 .italic {
   font-style: italic;
   padding-bottom: 8px;
-  color: purple;
+  color: green;
+}
+
+.image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.logoCenter {
+  display: flex;
+  align-items: center;
 }

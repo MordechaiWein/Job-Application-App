@@ -9,7 +9,12 @@ function Home() {
     
     return (
         <div className="homePage">
-            <h2 className="homeName">👋 Welcome {user.username}</h2>
+            <br/>
+            <br/>
+            <div className="welcome">
+                <img className="image" src={user.image_url}/>
+                <h2 className="homeName">{user.username}</h2>
+            </div>
             <p className="homeBio">{user.bio}</p>
             <br/>
             <h1 className="homeApplication">Your Job Applications:</h1>

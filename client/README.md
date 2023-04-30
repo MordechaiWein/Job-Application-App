@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# New Career Network (phase-4 final project)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+ 
+My name is Mordechai Wein. I created this app for my phase-4 project at Flatiron School. The app has a front-end written in React.js, which talks to a back-end written in Ruby on Rails. The app contains three database tables, jobs, users, and applications in a many-to-many relationship to fulfill project requirements. For example, each application in the applications joins table is associated with a particular user and job. Each model utilizes various validations, and each controller uses conditional logic to determine what to send back in the response.
 
-## Available Scripts
+## Description 
 
-In the project directory, you can run:
+When users open my application, they will be greeted by the sign-in page. A user can switch back and forth from a sign-in to a sign-up page but cannot enter the app. To prevent a user from changing the URL to access a different page, my application has a condition that as long as the user state is set to false, the login page alone will be rendered. 
 
-### `npm start`
+When a user signs up to my website, b-crypt will hash and salt the password. When a user logs in, the back end will check to see if the entered password matches its encrypted counterpart. If it does, the user will be logged in. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To log out, the user can click the logout button, which will destroy the user id key from the session hash, set the user state to null, and the user will be logged out. If the user logs in, leaves the website, and returns, they will be auto-logged in. Upon mount of the application, a use effect will trigger an HTTP request. If the back end can find the user based on the user id key from the session hash, it will send back the user; the state will then be updated to the received data, and the user will be logged in.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Aside from the authentication I have described above. I have done more to keep my application clean and secure. I have added various validations to my models to prevent null values and incorrect data. These include validations that will only allow unique usernames. Validations incorporating regex that will make sure phone numbers and emails are syntactically correct and more. If any of the data entered in a website form is incorrect, errors will appear on the page for a better user experience. To prevent Mass assignment vulnerability, I have incorporated strong parameters, and I have created a before action to prevent any potentially  malicious user from accessing most backend routes if they are not logged in.
 
-### `npm test`
+Once the user has been authenticated and enters the website, they can access many different features. There is a search bar with three client-side routes, home, jobs, and admin. A user can apply for different jobs, and when the user has applied, the applications will appear on their respective home pages. Users can access full CRUD functionality and update, delete, create, and read their applications. In addition, because of the app's complexity, I have utilized React context and prevented excessive prop drilling.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+When the user reaches the admin page, they will be greeted with a form where they can request to become an admin. If a member is an admin, the admin page will provide a form where they can add jobs to the website.
 
-### `npm run build`
+## credit
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Some of the CSS in my project was adapted from Flatiron School labs. For this, I would like to give credit to Flatiron School.

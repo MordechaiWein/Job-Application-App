@@ -14,7 +14,7 @@ function Login() {
                     <div>
                         <SignIn/> 
                         <hr/>
-                        <p className="accountQuest">Dont have an account? &nbsp; 
+                        <p className="accountQuest">Don't have an account? &nbsp; 
                             <button className='logInButton' onClick={() => setShowLogin(false)}>
                                 Sign Up
                             </button> 

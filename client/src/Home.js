@@ -12,8 +12,8 @@ function Home() {
             <br/>
             <br/>
             <div className="welcome">
-                <img className="image" src={user.image_url}/>
-                <h2 className="homeName">{user.username}</h2>
+                <img className="image" src="https://wallpapers.com/images/featured/40lkhq7b7tl3p1qw.jpg"/>
+                <h2 className="homeName">{user.username}</h2> &nbsp;&nbsp;&nbsp;<h2 className="check">✔</h2>
             </div>
             <p className="homeBio">{user.bio}</p>
             <br/>

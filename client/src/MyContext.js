@@ -6,15 +6,14 @@ function MyProvider({children}) {
 
     const [user, setUser] = useState(null)
     const [jobs, setJobs] = useState([])
-    const [applications, setApplications] = useState([])
-
+    
     useEffect(() => {
         fetch("/me")
         .then((response) => {
             if (response.ok) {
                 response.json().then(data => {
                     setUser(data)
-                    setApplications(data.applications)
+                   
                 })
             }
         })
@@ -27,27 +26,27 @@ function MyProvider({children}) {
     },[])
     
     function eraseApplication(erasedApplication) {
-        const applicationsToDisplay = applications.filter(application => application.id !== erasedApplication.id)
-        setApplications(applicationsToDisplay)
+        const applicationsToDisplay = user.applications.filter(application => application.id !== erasedApplication.id)
+        setUser( {...user, applications: applicationsToDisplay } )
     }
-
+    
     function editApplication(updatedApplication) {
-        const updateApplication = applications.map((application) => {
+        const updateApplication = user.applications.map((application) => {
             if (application.id === updatedApplication.id) {
-            return updatedApplication
+                return updatedApplication
             } else {
-            return application
+                return application
             }
         })
-        setApplications(updateApplication)
+        setUser( {...user, applications: updateApplication } )
     }
     
     return (
-        <MyContext.Provider value={{ user, setUser, jobs, setJobs, applications, eraseApplication, editApplication, setApplications }}>
+        <MyContext.Provider value={{ user, setUser, jobs, setJobs, eraseApplication, editApplication }}>
             {children}
         </MyContext.Provider>
     ) 
-
 }
 
 export { MyProvider, MyContext}
+

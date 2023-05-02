@@ -25,7 +25,7 @@ function Navigation() {
   return (
     <div className="navigation">
       <div className="logoCenter">
-        <img className="logoImage" src="https://img.icons8.com/?size=512&id=n57TZxD4nPYO&format=png"/>
+        <img className="logoImage" src="https://img.icons8.com/?size=512&id=n57TZxD4nPYO&format=png" alt="logo"/>
         <h1 className="navTitle">New Career Network</h1>
       </div>
       <div className="right">

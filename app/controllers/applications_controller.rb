@@ -32,6 +32,7 @@ class ApplicationsController < ApplicationController
         application = user.applications.find(params[:id])
         application.destroy
         render json: application
+       
     end
     
     private 

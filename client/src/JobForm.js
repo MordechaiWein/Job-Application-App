@@ -5,10 +5,9 @@ import { useParams, useHistory } from "react-router-dom";
 function JobForm() {
     
     const history = useHistory()
-    const {jobs, setApplications, applications} = useContext(MyContext)
+    const {user, setUser, jobs} = useContext(MyContext)
     const params = useParams()
     const [errors, setErrors] = useState([])
-   
     const jobName = jobs ? jobs.find(job => parseInt(params.id) === job.id) : [];
    
     const [data, setData] = useState({
@@ -32,7 +31,7 @@ function JobForm() {
         .then((response) => {
             if (response.ok) {
                 response.json().then(data => {
-                    setApplications([...applications, data])
+                    setUser({...user, applications: [...user.applications, data]})
                     history.push("/")
                 })
             } else {

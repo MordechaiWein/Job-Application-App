@@ -4,15 +4,15 @@ import { MyContext } from "./MyContext";
 
 function Home() {
 
-    const {user, applications} = useContext(MyContext)
-    const JobApplications = applications.map(application => <HomeCard key={application.id} application={application}/>) 
+    const {user} = useContext(MyContext)
+    const JobApplications = user.applications.map(application => <HomeCard key={application.id} application={application}/>)
     
     return (
         <div className="homePage">
             <br/>
             <br/>
             <div className="welcome">
-                <img className="image" src="https://wallpapers.com/images/featured/40lkhq7b7tl3p1qw.jpg"/>
+                <img className="image" src="https://wallpapers.com/images/featured/40lkhq7b7tl3p1qw.jpg" alt="Fox"/>
                 <h2 className="homeName">{user.username}</h2> &nbsp;&nbsp;&nbsp;<h2 className="check">✔</h2>
             </div>
             <p className="homeBio">{user.bio}</p>

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Login from './Login';
-import Jobs from './Jobs';
+import JobPage from './JobPage';
 import Home from './Home';
 import JobForm from './JobForm';
 import Navigation from './Navigation';
@@ -22,8 +22,8 @@ function App() {
         <Route exact path="/" >
           <Home />
         </Route>
-        <Route exact path="/jobs" >
-          <Jobs/>
+        <Route exact path="/jobpage" >
+          <JobPage/>
         </Route>
         <Route path="/jobs/:id">
           <JobForm />

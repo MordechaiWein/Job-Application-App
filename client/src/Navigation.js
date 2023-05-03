@@ -30,7 +30,7 @@ function Navigation() {
       </div>
       <div className="right">
         <NavLink to="/" exact style={linkStyles}> Home </NavLink>
-        <NavLink to="/jobs" exact style={linkStyles}> Jobs </NavLink>
+        <NavLink to="/jobpage" exact style={linkStyles}> Jobs </NavLink>
         <NavLink to="/admin" exact style={linkStyles}> Admin </NavLink>
         <button className="logout" onClick={handleClick}>Log Out</button>
       </div>

@@ -41,7 +41,7 @@ function Admin() {
             if (response.ok) {
                 response.json().then(data => {
                     setJobs([...jobs, data])
-                    history.push("/jobs")
+                    history.push("/jobpage")
                 })
             } else {
                 response.json().then(data => setErrors(data.errors))

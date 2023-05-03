@@ -13,6 +13,7 @@ function MyProvider({children}) {
             if (response.ok) {
                 response.json().then(data => {
                     setUser(data)
+                    console.log(data)
                    
                 })
             }

@@ -11,11 +11,7 @@ function MyProvider({children}) {
         fetch("/me")
         .then((response) => {
             if (response.ok) {
-                response.json().then(data => {
-                    setUser(data)
-                    console.log(data)
-                   
-                })
+                response.json().then(data => setUser(data))
             }
         })
     },[])

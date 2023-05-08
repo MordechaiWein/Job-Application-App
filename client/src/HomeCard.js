@@ -48,7 +48,7 @@ function HomeCard({application}) {
         .then(response => response.json())
         .then(data => eraseApplication(data))
     }
-
+    
     return (
         <div>
             <div className="homeCard">

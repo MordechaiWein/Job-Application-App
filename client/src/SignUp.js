@@ -10,8 +10,7 @@ function SignUp() {
         password:"",
         password_confirmation:"",
         image_url:"",
-        bio:"",
-        admin: false
+        bio:""
     })
     
     function handleSubmit(e) {

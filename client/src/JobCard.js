@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function JobCard({job}) {
+    
     return ( 
         <div className="card">
             <Link className="link" to={`/jobs/${job.id}`}>

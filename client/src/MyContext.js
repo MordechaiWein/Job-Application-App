@@ -15,7 +15,7 @@ function MyProvider({children}) {
             }
         })
     },[])
-
+        
     useEffect(() => {
         fetch('/jobs')
         .then(response => response.json())

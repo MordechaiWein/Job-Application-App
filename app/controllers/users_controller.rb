@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     private
     
     def strong_params
-        params.permit(:username, :password, :password_confirmation, :image_url, :bio, :admin)
+        params.permit(:username, :password, :password_confirmation, :image_url, :bio)
     end
 
     def render_user_errors(instance)

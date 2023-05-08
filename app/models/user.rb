@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
     validates :username, :image_url, :bio, presence: true
     validates :username, uniqueness: true
-    validates :bio, length: {maximum: 150}
+    validates :bio, length: {maximum: 70}
 end

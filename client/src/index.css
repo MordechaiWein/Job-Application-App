@@ -221,7 +221,7 @@ padding: "20px";
   padding: 25px;
 }
 
-.card {
+.box {
   width: 25rem;
   height: 10rem;
   display: inline-grid;
@@ -293,16 +293,28 @@ padding: "20px";
   background-color: white;
   color: green;
   border: solid 1px;
-  width: 80px;
-  height: 50px;
   border-radius: 5px;
   font-weight: Bold;
-  margin-right: 30px;
-  margin-top: 20px;
-  float: right;
+ 
+}
+
+.homeButtonLink{
+  background-color: white;
+  color: green;
+  padding: 5px;
+  border: solid 1px;
+  border-radius: 5px;
+  font-weight: Bold;
+  text-decoration: none;
+  
+ 
 }
 
 .homeButtons:hover{
+  background-color: green;
+  color: white;
+}
+.homeButtonLink:hover{
   background-color: green;
   color: white;
 }
@@ -429,6 +441,7 @@ padding: "20px";
   width: 500px;
   line-height: 40px;
   margin-left: 20px;
+  margin-top: 29px;
 
 }
 
@@ -475,3 +488,4 @@ padding: "20px";
 .below {
   margin-top: 29px;
 }
+

@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import HomeCard from "./HomeCard";
 import { MyContext } from "./MyContext";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function Home() {
 
@@ -18,6 +20,31 @@ function Home() {
             <p className="homeBio">{user.bio}</p>
             <br/>
             <h1 className="homeApplication">Your Job Applications:</h1>
+            <br/>
+            <div className="row">
+                <div className="col">
+                    <h3>Job Name</h3>
+                </div>
+                <div className="col">
+                <h3>Name</h3>
+                </div>
+                <div className="col">
+                <h3>Phone</h3>
+                </div>
+                <div className="col">
+                <h3>Email</h3>
+                </div>
+                <div className="col">
+                <h3>Experience</h3>
+                </div>
+                <div className="col">
+                <h3>Edit</h3>
+                </div>
+                <div className="col">
+                <h3>Delete</h3>
+                </div>
+                <hr/>
+            </div>
             {JobApplications}
         </div>
     )

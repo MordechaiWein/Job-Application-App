@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function JobCard({job}) {
     
     return ( 
-        <div className="card">
+        <div className="box">
             <Link className="link" to={`/jobs/${job.id}`}>
                 <h1 className="jobName">{job.name}</h1>
                 <h1 className="jobDescription">{job.job_description}</h1>

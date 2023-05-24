@@ -3,7 +3,7 @@ import { MyContext } from "./MyContext";
 
 function HomeCard({application}) {
 
-    const {eraseApplication, editApplication } = useContext(MyContext)
+    const {eraseApplication, editApplication, eraseJobUser} = useContext(MyContext)
     const [editFlag, setEditFlag] = useState(true)
     const [errors, setErrors] = useState([])
     const [data, setData] = useState({
@@ -46,13 +46,16 @@ function HomeCard({application}) {
             method: "DELETE" 
         })
         .then(response => response.json())
-        .then(data => eraseApplication(data))
+        .then(data => {
+            eraseApplication(data)
+            eraseJobUser(data)
+        })
     }
     
     return (
         <div>
             <div className="homeCard">
-                <h1 className="nameCard">{application.application_name} Application</h1>
+                <h1 className="nameCard">{application.job.name} Application</h1>
                 <button className="homeButtons" onClick={() => setEditFlag(!editFlag)}>Edit</button>
                 <button className="homeButtons" onClick={handleClick}>Delete</button>
                 <li className="italic">{application.first_name} {application.last_name} &nbsp; {application.phone_number} &nbsp; {application.email_address} &nbsp; {application.work_experience}</li> 
@@ -60,8 +63,8 @@ function HomeCard({application}) {
             {editFlag ? 
                 "" 
                 : 
-                <div className="applicationForm">
-                    <h1 className="appCenter">{application.application_name} Application Form</h1> 
+                <div className="applicationFormB">
+                    <h1 className="appCenter">{application.job.name} Application Form</h1> 
                     <h4 className="appCenter">We are an Equal Opportunity Employer and committed to excellence through diversity</h4>
                     <hr className="hr"/>
                     <br/>

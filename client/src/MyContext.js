@@ -37,13 +37,44 @@ function MyProvider({children}) {
         })
         setUser( {...user, applications: updateApplication } )
     }
+
+    function editJobUsers(data) {
+        const jobList = jobs.map(job => {
+            if (job.id === data.job_id) {
+                return {...job, users: [...job.users, user]}
+            }
+            return job
+        })
+        setJobs(jobList)
+    }
+
+    function eraseJobUser(data) {
+        const jobUsersToDisplay = jobs.map(job => { 
+            if (job.id === data.job_id) {
+                return {...job, users: job.users.filter(user => user.id !== data.user_id)}
+            } else {
+                return job
+            }
+        })
+        setJobs(jobUsersToDisplay)
+    }
     
     return (
-        <MyContext.Provider value={{ user, setUser, jobs, setJobs, eraseApplication, editApplication }}>
+        <MyContext.Provider value={{ user, setUser, jobs, setJobs, eraseApplication, editApplication, editJobUsers, eraseJobUser}}>
             {children}
         </MyContext.Provider>
     ) 
 }
 
 export { MyProvider, MyContext}
+
+
+
+
+
+
+
+
+
+
 

@@ -257,13 +257,7 @@ padding: "20px";
   font-size: 50px;
  }
 
- .applicationForm {
-  width: 700px;
-  margin: auto;
-  border: solid 1px;
-  margin-top: 30px;
-  border-radius: 10px;
-}
+
 
 .appCenter{
   text-align: center;
@@ -417,4 +411,67 @@ padding: "20px";
 
 .jobCenter {
   margin-left: 33px;
+}
+
+
+.userCenter {
+  text-align: center;
+} 
+
+.sameline {
+  margin-bottom: 20px;
+ 
+}
+
+.appliers{
+  display: inline-block;
+  vertical-align: top;
+  width: 500px;
+  line-height: 40px;
+  margin-left: 20px;
+
+}
+
+.applicationForm {
+  margin-top: 30px;
+  width: 700px;
+  border: solid 1px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.list {
+  font-weight: bold;
+  color: green;
+}
+
+.info {
+  display: inline-block;
+  vertical-align: top;
+  width: 300px;
+  margin-left: 100px;
+}
+
+.nameInfo {
+  display: inline-block;
+  color: green;
+}
+
+.space {
+  margin-bottom: -15px;
+}
+
+.i {
+  color: green;
+}
+
+.applicationFormB {
+  width: 700px;
+  margin: auto;
+  border: solid 1px;
+  border-radius: 10px;
+}
+
+.below {
+  margin-top: 29px;
 }

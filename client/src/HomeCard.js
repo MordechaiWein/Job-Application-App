@@ -54,31 +54,16 @@ function HomeCard({application}) {
     
     return (
         <div>
-            <div className="row">
-                <div className="col">
-                    <p>{application.job.name}</p>
-                </div>
-                <div className="col">
-                    <p>{application.last_name}   {application.first_name}</p>
-                </div>
-                <div className="col">
-                    <p>{application.phone_number}</p>
-                </div>
-                <div className="col">
-                    <p>{application.email_address}</p>
-                </div>
-                <div className="col">
-                    <p>{application.work_experience}</p>
-                </div>
-                <div className="col">
-                    <button className="homeButtons" onClick={() => setEditFlag(!editFlag)}>Edit</button>
-                </div>
-                <div className="col">
-                    <button className="homeButtons" onClick={handleClick}>Delete</button>
-                </div>
-                <hr/>
-     
-             </div>
+            <div className="gridcontainer">
+                <p className="grid1">{application.job.name}</p>
+                <p className="grid2">{application.last_name} &nbsp;{application.first_name}</p>
+                <p className="grid2">{application.phone_number}</p>
+                <p className="grid2">{application.email_address}</p>
+                <p className="grid2">{application.work_experience}</p>
+                <p className="grid2"> <button className="homeButtons" onClick={() => setEditFlag(!editFlag)}>Edit</button></p>
+                <p className="grid2"> <button className="homeButtons" onClick={handleClick}>Delete</button></p>
+            </div>
+            <hr/>
              {editFlag ? 
                 "" 
                 : 

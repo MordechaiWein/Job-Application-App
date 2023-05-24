@@ -293,31 +293,20 @@ padding: "20px";
   background-color: white;
   color: green;
   border: solid 1px;
-  border-radius: 5px;
   font-weight: Bold;
+  width: 60px;
+  height: 20px;
  
 }
 
-.homeButtonLink{
-  background-color: white;
-  color: green;
-  padding: 5px;
-  border: solid 1px;
-  border-radius: 5px;
-  font-weight: Bold;
-  text-decoration: none;
-  
- 
-}
+
+
 
 .homeButtons:hover{
   background-color: green;
   color: white;
 }
-.homeButtonLink:hover{
-  background-color: green;
-  color: white;
-}
+
 
 .adminRequest {
   width: 500px;
@@ -441,7 +430,7 @@ padding: "20px";
   width: 500px;
   line-height: 40px;
   margin-left: 20px;
-  margin-top: 29px;
+
 
 }
 
@@ -488,4 +477,23 @@ padding: "20px";
 .below {
   margin-top: 29px;
 }
+
+.gridcontainer {
+ 
+  display: flex;
+
+}
+
+.grid1 {
+  margin: 6px 0px;
+  width: 250px;
+
+}
+.grid2 {
+  width: 350px;
+  margin: 6px 20px;
+}
+
+
+
 

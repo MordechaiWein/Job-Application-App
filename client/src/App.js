@@ -3,6 +3,7 @@ import Login from './Login';
 import JobPage from './JobPage';
 import Home from './Home';
 import JobForm from './JobForm';
+import Edit from './Edit';
 import Navigation from './Navigation';
 import Admin from './Admin';
 import { MyContext } from "./MyContext";
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route path="/admin">
           <Admin/>
+        </Route>
+        <Route path="/:id">
+          <Edit/>
         </Route>
      </Switch>
     </div>

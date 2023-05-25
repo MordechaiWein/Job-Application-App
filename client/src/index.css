@@ -296,11 +296,19 @@ padding: "20px";
   font-weight: Bold;
   width: 60px;
   height: 20px;
- 
+  text-decoration: none;
 }
 
-
-
+.homeButtonLink{
+  background-color: white;
+  color: green;
+  border: solid 1px;
+  font-weight: Bold;
+  width: 60px;
+  height: 20px;
+  text-decoration: none;
+  padding: 5px;
+}
 
 .homeButtons:hover{
   background-color: green;

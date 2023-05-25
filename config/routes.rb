@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/me', to: 'users#show'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+  patch '/users/:id', to: 'users#update'
   resources :jobs, only: [:index, :create]
   resources :applications, only: [:index, :create, :update, :destroy]
   # Routing logic: fallback requests for React Router.

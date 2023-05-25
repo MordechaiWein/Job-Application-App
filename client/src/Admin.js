@@ -4,11 +4,11 @@ import { useHistory } from "react-router-dom";
 
 function Admin() {
 
-    const {user, jobs, setJobs} = useContext(MyContext)
+    const {user, setUser, jobs, setJobs} = useContext(MyContext)
     const history = useHistory()
     const [flag, setFlag] = useState(true)
-    const [admin, setAdmin] = useState("")
     const [errors, setErrors] = useState([])
+    const [poster, setPoster] = useState({admin: true})
     const [data, setData] = useState({
         name:"",
         job_description:"",
@@ -17,13 +17,21 @@ function Admin() {
     
     function handleSubmit(e) {
         e.preventDefault()
-        setAdmin("Thank you! your request has been submitted")
-        setFlag(true)
+        fetch(`users/${user.id}`, {
+            method: "PATCH",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(poster)
+        })
+        .then(response => response.json())
+        .then(data => {
+            setUser(data)
+            setFlag(true)
+            alert(`🎉🎉🎉 Congratulations ${user.username} you have become an admin!`)
+        })
     }
 
     function handleClick() {
-        setFlag(false)
-        setAdmin("")
+        setFlag(!flag)
     }
 
     function handleChange(event) {
@@ -57,7 +65,6 @@ function Admin() {
                 <h3>Become an admin today!</h3>
                 <br/>
                 <button className="becomeAdmin" onClick={handleClick}>Become an admin</button>
-                <h1>{admin}</h1>
             </div>
             <br />
             {flag ? 

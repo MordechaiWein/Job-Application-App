@@ -4,8 +4,7 @@ class CreateApplications < ActiveRecord::Migration[6.1]
       t.string :first_name
       t.string :last_name
       t.integer :age
-      t.string :work_experience
-      t.string :applicataion_name
+      t.string :word_experience
       t.integer :user_id
       t.integer :job_id
       t.string :phone_number
